@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************************
+* Debugging Microsoft .NET 2.0 Applications
+* Copyright © 1997-2006 John Robbins All rights reserved.
+**************************************************************************** -->
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment>
+      <ComponentGroup Id="groupShared">
+          <ComponentRef Id="componentShared"/>
+      </ComponentGroup>
+    <DirectoryRef Id="INSTALLDIR">
+      <Directory Id="directoryShared" Name="Shared">
+        <Component Id="componentShared" KeyPath="yes" DiskId="1" Guid="3C9D1A76-2FBE-4845-ABF9-C8DF4D3E7BBF">
+          <File Id="file_SHARED_0" Name="Shared.wxs" src="..\..\Shared\Shared.wxs" />
+          <File Id="file_SHARED_1" Name="SHARED_1.CPP" LongName="SharedAssemblyFileVersion.cpp" src="..\..\Shared\SharedAssemblyFileVersion.cpp" />
+          <File Id="file_SHARED_2" Name="SHARED_1.CS" LongName="SharedAssemblyFileVersion.cs" src="..\..\Shared\SharedAssemblyFileVersion.cs" />
+          <File Id="file_SHARED_3" Name="SHARED_1.VB" LongName="SharedAssemblyFileVersion.vb" src="..\..\Shared\SharedAssemblyFileVersion.vb" />
+          <File Id="file_SHARED_4" Name="SHARED_2.CS" LongName="SharedProperties.cs" src="..\..\Shared\SharedProperties.cs" />
+          <File Id="file_SHARED_5" Name="SHARED_1.XML" LongName="SharedVersion.xml" src="..\..\Shared\SharedVersion.xml" />
+          <File Id="file_SHARED_6" Name="WINTEL_1.SNK" LongName="Wintellect.Debugging.SNK" src="..\..\Shared\Wintellect.Debugging.SNK" />
+        </Component>
+      </Directory>
+    </DirectoryRef>
+  </Fragment>
+</Wix>
